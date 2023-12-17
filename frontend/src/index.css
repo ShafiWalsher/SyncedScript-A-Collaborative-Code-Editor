@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-drop-shadow {
+  box-shadow: -3px 5px 0 #087e8b;
+}
+.custom-drop-shadow:hover {
+  box-shadow: 3px -5px 0 #ffdd4a;
+  color: #f2f4ff;
+}
+
+.error {
+  border: 2px solid red;
+}
+
+@layer components {
+  input {
+    @apply focus:border-none focus:outline-none px-2 py-1 w-full rounded-r-md;
+  }
+
+  .form-label {
+    @apply text-yellow mt-5;
+  }
+}
+
+@layer utilities {
+  .input-div {
+    @apply flex bg-slate-100 rounded-md;
+  }
+
+  .editor-button {
+    @apply custom-drop-shadow transition-all duration-200 ease-in-out px-4 py-2 bg-secondary rounded-lg text-primary font-semibold hover:text-primary hover:bg-secondary/90 flex justify-between items-center;
+  }
+
+  .join-btn {
+    @apply mt-8 mb-4 px-4 py-2 bg-yellow rounded-md font-bold text-lg hover:bg-green custom-drop-shadow transition-all duration-200 ease-in-out flex items-center justify-center;
+  }
+}
